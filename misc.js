@@ -2,7 +2,7 @@ function _queryhash() {
   var q = window.location.search.substr(1), $hash = {};
   q.split('&').forEach( function( $part ) {
     var p2 = $part.split('=');
-    $hash[ p2[0] ] = ( typeof( p2[1] ) == 'undefined' ) ? '' : decodeURIComponent( p2[1] );
+    $hash[ p2[0] ] = ( p2.length < 2 ) ? '' : decodeURIComponent( p2[1] );
   } );
   return $hash;
 }
