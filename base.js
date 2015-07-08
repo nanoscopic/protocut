@@ -29,7 +29,7 @@ function arg2A($A) {
   }
   return ar;
 }
-Function.prototype.bind = function() {
+Function.prototype.bind = Function.prototype.bind || function() {
   var __method = this,
     args = arg2A(arguments),
     object = args.shift();
